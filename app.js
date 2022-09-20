@@ -1,5 +1,7 @@
 let container = document.querySelector('#container');
 
+//this sets the number of columns of for the grid
+container.style.setProperty('--n', 16)
 
 //Creates the first grid
 for(i = 0; i < 16*16; i++) {
@@ -19,7 +21,7 @@ const newGridBtn = document.querySelector('button');
 
 //remove all div elements and create a new grid using the number the user enter in the prompt
 function newGrid(size) {
-    
+    container.style.setProperty('--n', size);
     //this removes the previous grid
     div.forEach(element => element.remove());
 
